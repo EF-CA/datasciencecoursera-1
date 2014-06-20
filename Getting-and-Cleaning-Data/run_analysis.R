@@ -14,18 +14,18 @@ setwd("/Users/sommpd10/Desktop/UCI HAR Dataset")
 ######### Read in train & test data #########
 
 ## Train data
-subject_train <- read.csv("/Users/sommpd10/Desktop/UCI HAR Dataset/train/subject_train.txt", header = FALSE)
-X_train <- read.csv("/Users/sommpd10/Desktop/UCI HAR Dataset/train/X_train.txt", sep = "", header = FALSE)
-y_train <- read.csv("/Users/sommpd10/Desktop/UCI HAR Dataset/train/y_train.txt", header = FALSE)
+subject_train <- read.csv("train/subject_train.txt", header = FALSE)
+X_train <- read.csv("train/X_train.txt", sep = "", header = FALSE)
+y_train <- read.csv("train/y_train.txt", header = FALSE)
 
 ## Test data
-subject_test <- read.csv("/Users/sommpd10/Desktop/UCI HAR Dataset/test/subject_test.txt", header = FALSE)
-X_test <- read.csv("/Users/sommpd10/Desktop/UCI HAR Dataset/test/X_test.txt", sep = "", header = FALSE)
-y_test <- read.csv("/Users/sommpd10/Desktop/UCI HAR Dataset/test/y_test.txt", header = FALSE)
+subject_test <- read.csv("test/subject_test.txt", header = FALSE)
+X_test <- read.csv("test/X_test.txt", sep = "", header = FALSE)
+y_test <- read.csv("test/y_test.txt", header = FALSE)
 
 ######### 4) Add column names X_train & X_test #########
 
-X_labels <- read.csv("/Users/sommpd10/Desktop/UCI HAR Dataset/features.txt", sep = "", header = FALSE)
+X_labels <- read.csv("features.txt", sep = "", header = FALSE)
 X_labels <- X_labels[, 2]
 
 ## Train data
@@ -36,7 +36,7 @@ colnames(X_test) <- X_labels
 
 
 ######### 3) Add factor level labels to y_train & y_test #########
-activity_labels <- read.csv("/Users/sommpd10/Desktop/UCI HAR Dataset/activity_labels.txt", sep = "", header = FALSE)
+activity_labels <- read.csv("activity_labels.txt", sep = "", header = FALSE)
 activity_labels <- activity_labels[, 2]
 
 
